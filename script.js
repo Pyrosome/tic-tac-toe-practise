@@ -14,6 +14,8 @@ const win = [
   [3, 5, 7],
 ];
 
+// ---- make a move ---- //
+
 for (let i = 0; i < 9; i++) {
   markup += `<div class="item" data-id="${1 + i}"></div>`;
 }
@@ -58,11 +60,10 @@ const reset = document.querySelector("[type='button']"); // reset button
 reset.addEventListener('click', doReset);
 
 function doReset() {
-  markup = '';
+  content.innerHTML = markup;
   stepX = [];
   stepO = [];
   player = 'X';
-  console.log(player);
 }
 
 // const items = Array.from(document.querySelectorAll(".item")); // div.items nodelist to array
